@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[margin=3cm]{geometry}
+\title{Mathematical Statistics I\\ Recitation Session 6}
+\date{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}{Definition}
+\newtheorem*{definition*}{Definition}
+
+\newtheorem{exercise}{Exercise}
+\newtheorem*{exercise*}{Exercise}
+\begin{document}
+	\maketitle
+	
+	\begin{definition}
+		Let $X$ be a sample from an unknown population $P \in \mathcal{P}$ and $\vartheta$ be a real-valued parameter related to $P$. An unbiased estimator $T(X)$ of $\vartheta$ is called the uniformly minimum variance unbiased estimator (UMVUE) if and only if $\operatorname{Var}(T(X)) \leq \operatorname{Var}(U(X))$ for any unbiased estimator $U(X)$ of $\vartheta$.
+	\end{definition}
+	
+	\begin{theorem*}
+		(Rao-Blackwell). Let $X_1, X_2, \ldots, X_n, n$ a fixed positive integer, denote a random sample from a distribution (continuous or discrete) that has pdf or pmf $f(x ; \theta), \theta \in \Omega$. Let $Y_1=u_1\left(X_1, X_2, \ldots, X_n\right)$ be a sufficient statistic for $\theta$, and let $Y_2=u_2\left(X_1, X_2, \ldots, X_n\right)$, not a function of $Y_1$ alone, be an unbiased estimator of $\theta$. Then $E\left(Y_2 \mid y_1\right)=\varphi\left(y_1\right)$ defines a statistic $\varphi\left(Y_1\right)$. This statistic $\varphi\left(Y_1\right)$ is a function of the sufficient statistic for $\theta$; it is an unbiased estimator of $\theta$; and its variance is less than or equal to that of $Y_2$.
+	\end{theorem*}
+	
+	\begin{theorem*}
+		(Lehmann and Scheffé). Let $X_1, X_2, \ldots, X_n, n$ a fixed positive integer, denote a random sample from a distribution that has pdf or pmf $f(x ; \theta), \theta \in$ $\Omega$, let $Y_1=u_1\left(X_1, X_2, \ldots, X_n\right)$ be a sufficient statistic for $\theta$, and let the family $\left\{f_{Y_1}\left(y_1 ; \theta\right): \theta \in \Omega\right\}$ be complete. If there is a function of $Y_1$ that is an unbiased estimator of $\theta$, then this function of $Y_1$ is the unique MVUE of $\theta$.
+	\end{theorem*}
+	
+	\begin{exercise*}
+		Let $X_1, \ldots, X_n$ be iid according to the Poisson distribution $P(\lambda)$. Find the UMVU estimator of (a) $\lambda^k$ for any positive integer $k$ and (b) $e^{-\lambda}$.
+	\end{exercise*}
+	
+	\begin{exercise*}
+		Let $X_1, \ldots, X_n$ be iid according to the uniform distribution $U(0,\theta)$. Find the UMVU estimator of $\theta^k$ for any integer $k>-n$.
+	\end{exercise*}
+	 
+	\begin{exercise*}
+	Let $\left(X_1, \ldots, X_n\right), n>2$, be a random sample from the uniform distribution on the interval $\left(\theta_1-\theta_2, \theta_1+\theta_2\right)$, where $\theta_1 \in \mathcal{R}$ and $\theta_2>0$. Find the UMVUE of $\theta_1 / \theta_2$.
+	\end{exercise*}
+	
+	\begin{exercise*}
+		 Let $X_1,\dots,X_n$ be a random sample from poisson distribution with parameter $\theta > 0$. Using completeness of $\sum_{i}X_i$, find $E(X_1^2|\sum_{i}X_i)$.
+	\end{exercise*}
+	
+		\begin{theorem*}
+		Let $\mathcal{U}$ be the set of all unbiased estimators of 0 with finite variances and $T$ be an unbiased estimator of $\vartheta$ with $E\left(T^2\right)<\infty$. A necessary and sufficient condition for $T(X)$ to be a UMVUE of $\vartheta$ is that $E[T(X) U(X)]=0$ for any $U \in \mathcal{U}$ and any $P \in \mathcal{P}$.
+		
+		As a consequence, we have the following useful result. Let $T_j$ be a UMVUE of $\vartheta_j, j=1, \ldots, k$, where $k$ is a fixed positive integer. Then $\sum_{j=1}^k c_j T_j$ is a UMVUE of $\vartheta=\sum_{j=1}^k c_j \vartheta_j$ for any constants $c_1, \ldots, c_k$.
+	\end{theorem*}
+	
+	\begin{exercise*}
+		Let $\left(X_1, \ldots, X_n\right)$ be a sample of binary random variables with $P\left(X_i=1\right)=p \in(0,1)$.\\
+		(i) Find the UMVUE of $p^m$, where $m$ is a positive integer and $m \leq n$.\\
+		(ii) Find the UMVUE of $P\left(X_1+\cdots+X_m=k\right)$, where $m$ and $k$ are positive integers and $k \leq m \leq n$.\\
+		(iii) Find the UMVUE of $P\left(X_1+\cdots+X_{n-1}>X_n\right)$.
+	\end{exercise*}
+	
+	\pagenumbering{gobble}
+\end{document}

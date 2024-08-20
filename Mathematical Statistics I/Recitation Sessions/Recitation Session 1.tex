@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[margin=3.5cm]{geometry}
+\title{Mathematical Statistics I\\ Recitation Session 1}
+\date{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}{Definition}
+\newtheorem*{definition*}{Definition}
+
+\newtheorem{exercise}{Exercise}
+\newtheorem*{exercise*}{Exercise}
+\begin{document}
+	\maketitle
+	Consider a family $\{f(x ; \theta): \theta \in \Omega\}$ of probability density or mass functions, where $\Omega$ is the interval set $\Omega=\{\theta: \gamma<\theta<\delta\}$, where $\gamma$ and $\delta$ are known constants (they may be $\pm \infty$ ), and where
+	\begin{equation}\label{expForm}
+	f(x ; \theta)= \begin{cases}
+	\exp [p(\theta) K(x)+H(x)+q(\theta)] & x \in \mathcal{S} \\ 0 & \text { elsewhere, }
+	\end{cases}
+	\end{equation}
+	where $\mathcal{S}$ is the support of $X$.
+	\begin{definition*}
+	A pdf of the form \eqref{expForm} is said to be a member of the regular exponential class of probability density or mass functions if\\
+	1. $\mathcal{S}$, the support of $X$, does not depend upon $\theta$\\
+	2. $p(\theta)$ is a nontrivial continuous function of $\theta \in \Omega$\\
+	3. Finally,\\
+	(a) if $X$ is a continuous random variable, then each of $K^{\prime}(x) \not \equiv 0$ and $H(x)$ is a continuous function of $x \in \mathcal{S}$,\\
+	(b) if $X$ is a discrete random variable, then $K(x)$ is a nontrivial function of $x \in \mathcal{S}$.
+	\end{definition*}
+	
+	\begin{theorem*}
+		Let $X_1, X_2, \ldots, X_n$ denote a random sample from a distribution that represents a regular case of the exponential class, with pdf or pmf given by \eqref{expForm}. Consider the statistic $Y=\sum_{i=1}^n K\left(X_i\right)$. Then\\
+		1. The pdf or pmf of $Y$ has the form
+		$$
+		f_{Y}\left(y ; \theta\right)=R\left(y\right) \exp \left[p(\theta) y+n q(\theta)\right]
+		$$
+		for $y \in \mathcal{S}_{Y}$ and some function $R\left(y\right)$. Neither $\mathcal{S}_{Y}$ nor $R\left(y\right)$ depends on $\theta$.\\
+		2. $E\left(Y\right)=-n \frac{q^{\prime}(\theta)}{p^{\prime}(\theta)}$.\\
+		3. $\operatorname{Var}\left(Y\right)=n \frac{1}{p^{\prime}(\theta)^3}\left\{p^{\prime \prime}(\theta) q^{\prime}(\theta)-q^{\prime \prime}(\theta) p^{\prime}(\theta)\right\}$.
+	\end{theorem*}
+	
+	\begin{exercise*}
+	Given that $f(x ; \theta)=\exp [\theta K(x)+H(x)+q(\theta)], a<x<b, \gamma<\theta<\delta$, represents a regular case of the exponential class, show that the moment-generating function $M(t)$ of $Y=K(X)$ is $M(t)=\exp [q(\theta)-q(\theta+t)], \gamma<\theta+t<\delta$.
+	\end{exercise*}
+	\begin{exercise*}
+	Let $X$ and $Y$ be random variables having the bivariate normal distribution with $\operatorname{E}(X)=\operatorname{E}(Y)=0, \operatorname{Var}(X)=\operatorname{Var}(Y)=1$,
+	and $\operatorname{Cov}(X, Y)=\rho$. Show that $E(\max \{X, Y\})=\sqrt{(1-\rho) / \pi}$.
+	\end{exercise*}
+	\pagenumbering{gobble}
+\end{document}

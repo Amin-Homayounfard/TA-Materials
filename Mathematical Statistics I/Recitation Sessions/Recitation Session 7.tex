@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[margin=3cm]{geometry}
+\title{Mathematical Statistics I\\ Recitation Session 7}
+\date{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}{Definition}
+\newtheorem*{definition*}{Definition}
+
+\newtheorem{exercise}{Exercise}
+\newtheorem*{exercise*}{Exercise}
+\begin{document}
+	\maketitle
+	
+	\begin{theorem*}
+		Let $\mathcal{U}$ be the set of all unbiased estimators of 0 with finite variances and $T$ be an unbiased estimator of $\vartheta$ with $E\left(T^2\right)<\infty$. A necessary and sufficient condition for $T(X)$ to be a UMVUE of $\vartheta$ is that $E[T(X) U(X)]=0$ for any $U \in \mathcal{U}$ and any $P \in \mathcal{P}$.
+	\end{theorem*}
+	
+	\begin{theorem*}
+		Uniformly minimum-variance unbiased estimator (UMVUE) is unique, whenever it exists.
+	\end{theorem*}
+	
+	\begin{exercise*}
+		Let $X_1, \ldots, X_n$ be i.i.d from uniform distribution on the interval $(0,\theta)$ with parameter space $\Theta = [1,\infty)$. Find UMVUE of $\theta$. Note that the maximum order statistic, $X_{(n)}$, is sufficient for $\theta$ but not complete because $\theta \geq 1$.
+	\end{exercise*}
+	
+	\begin{exercise*}
+		Let $\left(X_1, \ldots, X_n\right)$ be a random sample from the exponential distribution with density $\theta^{-1} e^{-(x-a) / \theta} I_{(a, \infty)}(x)$, where $a \leq 0$ and $\theta$ is known. Obtain a UMVUE of $a$.
+		Note that the minimum order statistic, $X_{(1)}$, is sufficient for $a$ but not complete because $a \leq 0$.
+	\end{exercise*}
+	 
+	\begin{exercise*}
+	Let $X$ be an observation from uniform $(\theta, \theta+1), \theta \in \mathbb{R}$. Show that there is no UMVUE of $g(\theta)$ for any non-constant differentiable function $g$.
+	\end{exercise*}
+	
+	\pagenumbering{gobble}
+\end{document}

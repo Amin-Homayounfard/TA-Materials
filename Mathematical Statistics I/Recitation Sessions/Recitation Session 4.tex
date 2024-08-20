@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[margin=3.5cm]{geometry}
+\title{Mathematical Statistics I\\ Recitation Session 4}
+\date{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}{Definition}
+\newtheorem*{definition*}{Definition}
+
+\newtheorem{exercise}{Exercise}
+\newtheorem*{exercise*}{Exercise}
+\begin{document}
+	\maketitle
+	\begin{theorem*}
+		(Basu’s Theorem) If $T(\mathbf{X})$ is a complete and minimal sufficient statistic, then $T(\mathbf{X})$ is independent of every ancillary statistic.
+	\end{theorem*}
+	
+	\begin{theorem*}
+		If a minimal sufficient statistic exists, then any complete statistic is also a minimal sufficient statistic.
+	\end{theorem*}
+		So even though the word “minimal” is redundant in the statement of Basu’s Theorem, it was stated in this way as a reminder that the statistic $T(\mathbf{X})$ in the theorem is a minimal sufficient statistic.
+		
+	\begin{definition*}
+		A statistic $S(X)$ whose distribution does not depend on the parameter $\theta$ is called an ancillary statistic.
+	\end{definition*}
+	
+	\begin{exercise*}
+		Suppose $X_1$ and $X_2$ are iid observations from the pdf $f(x;\alpha)=\alpha x^{\alpha-1} e^{-x^\alpha}, x>0, \alpha>$ 0 . Show that $\left(\log X_1\right) /\left(\log X_2\right)$ is an ancillary statistic.
+	\end{exercise*}
+	 
+	\begin{exercise*}
+		Let $X_1, \ldots, X_n$ be a random sample from a location family. Show that $M-\bar{X}$ is an ancillary statistic, where $M$ is the sample median.
+	\end{exercise*}
+	
+	\begin{exercise*}
+		Let $X_1,\dots,X_n$ i.i.d. random variables having the exponential distribution with parameter $\theta$. Determine the expected value of $g(\mathbf{X})$ where,
+		$$
+		g(\mathbf{X}) = \frac{X_n}{X1 + \dots + X_n}
+		$$
+	\end{exercise*}
+	
+	\begin{exercise*}
+		Let $X_1, \ldots, X_n$ be a random sample from the pdf $f(x;\mu)=e^{-(x-\mu)}$, where $\mu<x$.\\
+		(a) Show that $X_{(1)}$ is a complete sufficient statistic.\\
+		(b) Use Basu's Theorem to show that $X_{(1)}$ and $S^2$ are independent.
+	\end{exercise*}
+	
+	\begin{exercise*}
+		Let $X_1, \ldots, X_n$ be i.i.d. random variables having the uniform distribution on the interval $(a, b)$, where $-\infty<a<b<\infty$. Show that $\left(X_{(i)}-X_{(1)}\right) /\left(X_{(n)}-X_{(1)}\right), i=2, \ldots, n-1$, are independent of $\left(X_{(1)}, X_{(n)}\right)$ for any $a$ and $b$.
+	\end{exercise*}
+	
+	\begin{exercise*}
+		Let $X_1, \ldots, X_n$ be i.i.d. random variables having the gamma distribution $\Gamma(\alpha, \gamma)$. Show that $\sum_{i=1}^n X_i$ and $\sum_{i=1}^n\left[\log X_i-\log X_{(1)}\right]$ are independent for any $(\alpha, \gamma)$.
+	\end{exercise*}
+	
+	
+	
+
+	\pagenumbering{gobble}
+\end{document}
